@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produtos - Florarte Recife</title>
+    <link rel="stylesheet" href="/Produtos/produtos.style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/image/icons/apple-touch-icon.png"
+    />
+
+    <!-- Manifesto PWA -->
+    <link rel="manifest" href="/manifest.json" />
+    <!-- Ícone da aba do navegador -->
+    <link
+      rel="icon"
+      href="/image/icons/AppIcons (1)/playstore.png"
+      type="image/png"
+    />
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/service-worker.js")
+            .then((reg) =>
+              console.log("✅ Service Worker registrado:", reg.scope)
+            )
+            .catch((err) =>
+              console.error("❌ Erro ao registrar o Service Worker:", err)
+            );
+        });
+      }
+    </script>
+    <script src="/Produtos/produtos.js"></script>
+  </head>
+  <body>
+    <!-- Cabeçalho -->
+    <header>
+      <h1>
+        <a href="/index.html">
+          <img src="/image/Logo-sem-fundo.png" alt="logo do site" />
+        </a>
+      </h1>
+      <button class="menu-hamburguer" title="Abrir menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="menu">
+        <ul>
+          <li><a href="/index.html">Início</a></li>
+          <li><a href="/Sobre/sobre.html">Sobre</a></li>
+          <li><a href="/Produtos/produtos.html">Produtos</a></li>
+          <li><a href="/Contato/contato.html">Contato</a></li>
+          <li><button id="loginBtn">Entrar</button></li>
+        </ul>
+      </nav>
+    </header>
+
+    <script>
+      // Script DEVE vir depois do HTML
+      document.addEventListener("DOMContentLoaded", () => {
+        const btn = document.querySelector(".menu-hamburguer");
+        const menu = document.querySelector("nav.menu");
+
+        btn.addEventListener("click", () => {
+          menu.classList.toggle("active");
+        });
+      });
+    </script>
+
+    <!-- Banner Interno -->
+    <section class="banner-interno">
+      <h2>Nossos Produtos</h2>
+      <p>Descubra nossa variedade de flores e plantas</p>
+    </section>
+
+    <!-- Categorias -->
+    <section class="categorias">
+      <div class="container">
+        <h2>Categorias</h2>
+        <p class="subtitulo">Encontre o tipo perfeito para cada ocasião</p>
+        <div class="categorias-grid">
+          <div class="categoria-item">
+            <img src="/image/Buquês.jpg" alt="Categoria de Buquês de flores" />
+            <h3>Buquês</h3>
+            <a href="#" class="btn-secondary">Ver Mais</a>
+          </div>
+          <div class="categoria-item">
+            <img
+              src="/image/Arranjos.jpg"
+              alt="Categoria de Arranjos florais"
+            />
+            <h3>Arranjos</h3>
+            <a href="#" class="btn-secondary">Ver Mais</a>
+          </div>
+          <div class="categoria-item">
+            <img
+              src="/image/Plantas.png"
+              alt="Categoria de Plantas ornamentais"
+            />
+            <h3>Plantas</h3>
+            <a href="#" class="btn-secondary">Ver Mais</a>
+          </div>
+          <div class="categoria-item">
+            <img
+              src="/image/Presente-Flores.jpg"
+              alt="Categoria de Presentes com flores"
+            />
+            <h3>Presentes</h3>
+            <a href="#" class="btn-secondary">Ver Mais</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Todos Produtos -->
+    <section class="todos-produtos">
+      <div class="container">
+        <h2>Todos os Produtos</h2>
+
+        <!-- Filtros -->
+
+        <div class="filtros">
+          <label for="categoria">Categoria:</label>
+          <!-- Adicionado texto descritivo -->
+          <select name="categoria" id="categoria">
+            <option value="">Todas Categorias</option>
+            <option value="buques">Buquês</option>
+            <option value="arranjos">Arranjos</option>
+            <option value="plantas">Plantas</option>
+            <option value="presentes">Presentes</option>
+          </select>
+
+          <label for="preco">Preço:</label>
+          <!-- Adicionado texto descritivo -->
+          <select name="preco" id="preco">
+            <option value="">Todos os Preços</option>
+            <option value="0-50">Até R$ 50</option>
+            <option value="50-100">R$ 50 - R$ 100</option>
+            <option value="100-200">R$ 100 - R$ 200</option>
+            <option value="200+">Acima de R$ 200</option>
+          </select>
+
+          <button class="btn-primary">Filtrar</button>
+        </div>
+
+        <!-- Produtos -->
+        <div class="produtos-grid">
+          <!-- Produto 1 -->
+          <div class="produto-card" data-categoria="buques" data-preco="89.90">
+            <div class="produto-imagem">
+              <img
+                src="/image/Produtos-Buquê de Rosas Vermelhas.jpg"
+                alt="Buquê de Rosas Vermelhas"
+              />
+            </div>
+            <div class="produto-info">
+              <h3>Buquê de Rosas Vermelhas</h3>
+              <p>12 rosas vermelhas com folhagem decorativa</p>
+              <div class="produto-footer">
+                <span class="preco">R$ 89,90</span>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Produto 2 -->
+          <div
+            class="produto-card"
+            data-categoria="arranjos"
+            data-preco="120.00"
+          >
+            <div class="produto-imagem">
+              <img
+                src="/image/Produtos-Arranjo Tropical.jpg"
+                alt="Arranjo Tropical"
+              />
+            </div>
+            <div class="produto-info">
+              <h3>Arranjo Tropical</h3>
+              <p>Mix de flores tropicais em vaso decorativo</p>
+              <div class="produto-footer">
+                <span class="preco">R$ 120,00</span>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Produto 3 -->
+          <div class="produto-card" data-categoria="plantas" data-preco="45.00">
+            <div class="produto-imagem">
+              <img
+                src="/image/Produtos-Kit Suculentas.jpg"
+                alt="Kit Suculentas"
+              />
+            </div>
+            <div class="produto-info">
+              <h3>Kit Suculentas</h3>
+              <p>3 suculentas diferentes em vasos de cerâmica</p>
+              <div class="produto-footer">
+                <span class="preco">R$ 45,00</span>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Produto 4 -->
+          <div class="produto-card" data-categoria="buques" data-preco="65.00">
+            <div class="produto-imagem">
+              <img
+                src="/image/Produtos-Buquê_de_Girassóis.jpg"
+                alt="Buquê de Girassóis"
+              />
+            </div>
+            <div class="produto-info">
+              <h3>Buquê de Girassóis</h3>
+              <p>6 girassóis com folhagem natural</p>
+              <div class="produto-footer">
+                <span class="preco">R$ 65,00</span>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Produto 5 -->
+          <div class="produto-card" data-categoria="plantas" data-preco="75.00">
+            <div class="produto-imagem">
+              <img
+                src="/image/Produtos-Orquídea Phalaenopsis.jpg"
+                alt="Orquídea Phalaenopsis"
+              />
+            </div>
+            <div class="produto-info">
+              <h3>Orquídea Phalaenopsis</h3>
+              <p>Orquídea branca em vaso decorativo</p>
+              <div class="produto-footer">
+                <span class="preco">R$ 75,00</span>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </div>
+          </div>
+          <!-- Produto 6 -->
+          <div
+            class="produto-card"
+            data-categoria="presentes"
+            data-preco="150.00"
+          >
+            <div class="produto-imagem">
+              <img
+                src="/image/Produtos-Cesta de Presente.jpg"
+                alt="Cesta de Presente"
+              />
+            </div>
+            <div class="produto-info">
+              <h3>Cesta de Presente</h3>
+              <p>Cesta com flores, chocolates e vinho</p>
+              <div class="produto-footer">
+                <span class="preco">R$ 150,00</span>
+                <button class="btn-comprar">Comprar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paginação -->
+        <div class="paginacao">
+          <a href="#" class="pagina-atual">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">&raquo;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+      <p>&copy; 2025 Florarte. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Botão WhatsApp -->
+    <a
+      title="acesso ao WhatsApp"
+      href="https://wa.me/5581999999999"
+      rel="noopener"
+      class="btn-whatsapp"
+      target="_blank"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JS para modal -->
+    <script></script>
+  </body>
+</html>

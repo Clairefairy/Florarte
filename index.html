@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Florarte Recife</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href="/index.html">
+          <img src="/image/Logo-sem-fundo.png" alt="logo do site" />
+        </a>
+      </h1>
+      <button class="menu-hamburguer" title="Abrir menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="menu">
+        <ul>
+          <li><a href="/index.html">Início</a></li>
+          <li><a href="/Sobre/sobre.html">Sobre</a></li>
+          <li><a href="/Produtos/produtos.html">Produtos</a></li>
+          <li><a href="/Contato/contato.html">Contato</a></li>
+          <li><button id="loginBtn">Entrar</button></li>
+        </ul>
+      </nav>
+    </header>
+
+    <script>
+      // Script DEVE vir depois do HTML
+      document.addEventListener("DOMContentLoaded", () => {
+        const btn = document.querySelector(".menu-hamburguer");
+        const menu = document.querySelector("nav.menu");
+
+        btn.addEventListener("click", () => {
+          menu.classList.toggle("active");
+        });
+      });
+    </script>
+    <main>
+      <section class="imagem-destaque">
+        <img
+          src="/image/campo-de-flores1.png"
+          alt="Flores coloridas e delicadas"
+        />
+      </section>
+      <section class="sobre">
+        <h2>Bem-vindo à Florarte Recife</h2>
+        <p>
+          Somos apaixonados por flores e acreditamos que cada arranjo transmite
+          sentimentos únicos. Desde 1995, nossa missão é levar beleza e emoção
+          para cada momento especial. 🌸
+        </p>
+      </section>
+      <section class="banner">
+        <h2>Flores que encantam, momentos que ficam</h2>
+        <p>Arranjos personalizados para todas as ocasiões</p>
+      </section>
+      <section class="produtos">
+        <article class="produto">
+          <img src="/image/Buquê de Rosas.png" alt="Buquê de rosas vermelhas" />
+          <h3>Buquê de Rosas</h3>
+          <p>R$ 79,90</p>
+        </article>
+        <article class="produto">
+          <img
+            src="/image/Vaso de orquídea branca.png"
+            alt="Vaso de orquídea branca"
+          />
+          <h3>Orquídea Branca</h3>
+          <p>R$ 59,90</p>
+        </article>
+        <article class="produto">
+          <img
+            src="/image/Arranjo de Margaridas.png"
+            alt="Arranjo de margaridas"
+          />
+          <h3>Arranjo de Margaridas</h3>
+          <p>R$ 49,90</p>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Florarte Recife. Todos os direitos reservados.</p>
+    </footer>
+    <!-- Modal de login -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>
+          <a href="/index.html">
+            <img src="/image/Logo-com-fundo.png" alt="logo do site" />
+          </a>
+        </h2>
+        <input type="text" placeholder="Usuário" />
+        <input type="password" placeholder="Senha" /> <button>Entrar</button>
+      </div>
+    </div>
+    <!-- Botão de WhatsApp -->
+    <a
+      href="https://wa.me/5581999999999"
+      rel="noopener"
+      class="btn-whatsapp"
+      target="_blank"
+    >
+      <i class="fab fa-whatsapp"></i> Fale Conosco
+    </a>
+  </body>
+</html>

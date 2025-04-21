@@ -1,0 +1,374 @@
+/* ======================= */
+/* 🎨 PALETA DE CORES     */
+/* ======================= */
+:root {
+  --rosa-antigo: #d1848e;
+  --rosa-suave: #dda8b3;
+  --cinza-claro: #f2f2f2;
+  --bege-claro: #cbc196;
+  --marrom-suave: #9a865d;
+  --dourado-suave: #8c7b5a;
+  --texto-escuro: #333;
+  --branco: #fff;
+  --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --sombra-moderada: 0 5px 20px rgba(0, 0, 0, 0.15);
+  --transicao: 0.3s ease;
+}
+
+/* ======================= */
+/* 🔧 RESET E BASE        */
+/* ======================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: var(--cinza-claro);
+  color: var(--texto-escuro);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* ======================= */
+/* ⬆️ CABEÇALHO          */
+/* ======================= */
+header {
+  background: linear-gradient(135deg, var(--rosa-antigo), var(--rosa-suave));
+  padding: 30px 20px;
+  text-align: center;
+  color: var(--branco);
+}
+
+header h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+/* TAMANHO DA LOGO */
+header img {
+  width: 250px;
+  height: 250px;
+}
+
+/* ======================= */
+/* 📌 NAVEGAÇÃO           */
+/* ======================= */
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  padding: 10px 0;
+}
+
+nav ul li a {
+  color: var(--branco);
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+#loginBtn {
+  background: var(--dourado-suave);
+  color: var(--branco);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#loginBtn:hover {
+  background: var(--marrom-suave);
+}
+
+/* ======================= */
+/* 🖼️ BANNER PRINCIPAL   */
+/* ======================= */
+.banner {
+  background-color: var(--bege-claro);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.banner h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.banner p {
+  font-size: 1.2rem;
+}
+
+/* Banner Interno */
+.banner-interno {
+  background: url("../images/banner-sobre.jpg") center/cover no-repeat;
+  color: var(--branco);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.banner-interno h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: var(--marrom-suave);
+}
+
+.banner-interno p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* ======================= */
+/* 📬 CONTATO             */
+/* ======================= */
+
+.banner-interno h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.banner-interno p {
+  font-size: 1.2rem;
+}
+
+.contato {
+  background: var(--branco);
+  padding: 4rem 1rem;
+}
+
+.contato .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contato-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.contato-info h2,
+.contato-form h2 {
+  color: var(--rosa-antigo);
+  margin-bottom: 1rem;
+}
+
+.contato-info p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: var(--texto-escuro);
+}
+
+.info-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 1rem;
+  align-items: flex-start;
+}
+
+.info-item i {
+  font-size: 1.5rem;
+  color: var(--rosa-antigo);
+}
+
+.info-item h3 {
+  margin: 0;
+  color: var(--dourado-suave);
+  font-size: 1rem;
+}
+
+.redes-sociais {
+  margin-top: 2rem;
+}
+
+.redes-sociais h3 {
+  margin-bottom: 10px;
+  color: var(--dourado-suave);
+}
+
+.redes-icons a {
+  margin-right: 10px;
+  color: var(--rosa-antigo);
+  font-size: 1.4rem;
+  transition: var(--transicao);
+}
+
+.redes-icons a:hover {
+  color: var(--marrom-suave);
+}
+
+/* Formulário */
+.contato-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: var(--texto-escuro);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: var(--cinza-claro);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--rosa-antigo);
+  box-shadow: 0 0 0 2px rgba(209, 132, 142, 0.2);
+}
+
+.btn-primary {
+  background: var(--rosa-antigo);
+  color: var(--branco);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transicao);
+  align-self: flex-start;
+}
+
+.btn-primary:hover {
+  background: var(--marrom-suave);
+}
+
+/* Mapa */
+.mapa iframe {
+  border: none;
+  width: 100%;
+  height: 450px;
+  margin-top: -2rem;
+  box-shadow: var(--sombra-suave);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .contato-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .banner-interno h2 {
+    font-size: 2rem;
+  }
+
+  .banner-interno p {
+    font-size: 1rem;
+  }
+}
+/* ======================= */
+/* 📲 BOTÃO WHATSAPP      */
+/* ======================= */
+.btn-whatsapp {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #25d366;
+  color: var(--branco);
+  padding: 15px;
+  border-radius: 50px;
+  font-size: 20px;
+  text-decoration: none;
+  box-shadow: var(--sombra-suave);
+  transition: var(--transicao);
+  z-index: 999;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5f;
+}
+/* ======================= */
+/* 🦶 RODAPÉ              */
+/* ======================= */
+footer {
+  background: var(--rosa-suave);
+  color: black;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+/* Configurações Gerais */
+.menu-hamburguer {
+  display: none;
+  font-size: 28px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  color: var(--dourado-suave);
+  background: var(--rosa-suave); /* Fundo para destacá-lo */
+  padding: 10px;
+  border-radius: 20%; /* Forma circular */
+  box-shadow: var(--sombra-suave); /* Sombra leve */
+  transition: all var(--transicao);
+}
+
+.menu-hamburguer:hover {
+  color: var(--branco);
+  background: var(--rosa-antigo); /* Cor de fundo ao passar o mouse */
+  transform: scale(1.1); /* Leve aumento ao passar o mouse */
+}
+
+nav.menu ul li a:hover {
+  color: var(--dourado-suave);
+}
+
+/* Mobile Responsivo */
+@media (max-width: 768px) {
+  .menu-hamburguer {
+    display: block;
+  }
+
+  nav.menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: var(--rosa-suave);
+    padding: 15px 20px;
+    box-shadow: var(--sombra-moderada);
+    border-bottom: 2px solid var(--dourado-suave);
+  }
+
+  nav.menu.active {
+    display: flex;
+  }
+
+  nav.menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav.menu ul li a {
+    width: 100%;
+    padding: 10px;
+    color: var(--branco);
+    transition: background-color var(--transicao);
+  }
+}

@@ -1,0 +1,577 @@
+/* ======================= */
+/* 🎨 PALETA DE CORES     */
+/* ======================= */
+:root {
+  --rosa-antigo: #d1848e;
+  --rosa-suave: #dda8b3;
+  --cinza-claro: #f2f2f2;
+  --bege-claro: #cbc196;
+  --marrom-suave: #9a865d;
+  --dourado-suave: #8c7b5a;
+  --texto-escuro: #333;
+  --branco: #fff;
+  --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --sombra-moderada: 0 5px 20px rgba(0, 0, 0, 0.15);
+  --transicao: 0.3s ease;
+}
+
+/* ======================= */
+/* 🔧 RESET E BASE        */
+/* ======================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: var(--cinza-claro);
+  color: var(--texto-escuro);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* ======================= */
+/* ⬆️ CABEÇALHO          */
+/* ======================= */
+header {
+  background: linear-gradient(135deg, var(--rosa-antigo), var(--rosa-suave));
+  padding: 30px 20px;
+  text-align: center;
+  color: var(--branco);
+}
+
+header h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+/* TAMANHO DA LOGO */
+header img {
+  width: 250px;
+  height: 250px;
+}
+
+/* ======================= */
+/* 📌 NAVEGAÇÃO           */
+/* ======================= */
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  padding: 10px 0;
+}
+
+nav ul li a {
+  color: var(--branco);
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* ======================= */
+/* 🔐 BOTÃO DE LOGIN      */
+/* ======================= */
+
+/* #loginBtn {
+  background-color: var(--bege-claro);
+  color: var(--branco);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transicao);
+}
+
+#loginBtn:hover {
+  background-color: var(--marrom-suave);
+} */
+
+#loginBtn {
+  background: var(--dourado-suave);
+  color: var(--branco);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#loginBtn:hover {
+  background: var(--marrom-suave);
+}
+
+/* ======================= */
+/* 🖼️ BANNER PRINCIPAL   */
+/* ======================= */
+.banner {
+  background-color: var(--bege-claro);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.banner h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.banner p {
+  font-size: 1.2rem;
+}
+
+/* ======================= */
+/* 🌸 PRODUTOS            */
+/* ======================= */
+.produtos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px 20px;
+}
+
+.produto {
+  background-color: var(--bege-claro);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  width: 250px;
+  box-shadow: var(--sombra-suave);
+  transition: transform var(--transicao);
+}
+
+.produto:hover {
+  transform: scale(1.05);
+}
+
+.produto img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.produto h3 {
+  margin-top: 15px;
+  font-size: 22px;
+  color: var(--marrom-suave);
+}
+
+.produto p {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--branco);
+}
+
+/* ======================= */
+/* 🦶 RODAPÉ              */
+/* ======================= */
+footer {
+  background: var(--rosa-suave);
+  color: black;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+
+/* ======================= */
+/* 🔐 MODAL DE LOGIN      */
+/* ======================= */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--cinza-claro);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: var(--sombra-moderada);
+  width: 90%;
+  max-width: 400px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.modal-content button {
+  background: var(--rosa-antigo);
+  color: var(--branco);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transicao);
+}
+
+.modal-content button:hover {
+  background: var(--rosa-suave);
+}
+
+/* ======================= */
+/* 📲 BOTÃO WHATSAPP      */
+/* ======================= */
+.btn-whatsapp {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #25d366;
+  color: var(--branco);
+  padding: 15px;
+  border-radius: 50px;
+  font-size: 20px;
+  text-decoration: none;
+  box-shadow: var(--sombra-suave);
+  transition: var(--transicao);
+  z-index: 999;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5f;
+}
+
+/* ======================= */
+/* 🖼️ IMAGEM DESTAQUE    */
+/* ======================= */
+.imagem-destaque {
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.imagem-destaque img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ======================= */
+/* ℹ️ SEÇÃO SOBRE         */
+/* ======================= */
+.sobre {
+  background-color: var(--cinza-claro);
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.sobre h2 {
+  font-size: 2rem;
+  color: var(--marrom-suave);
+  margin-bottom: 20px;
+}
+
+.sobre p {
+  font-size: 18px;
+  color: var(--texto-escuro);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Banner Interno */
+.banner-interno {
+  background: url("../images/banner-sobre.jpg") center/cover no-repeat;
+  color: var(--branco);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.banner-interno h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: var(--marrom-suave);
+}
+
+.banner-interno p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Conteúdo Sobre */
+.sobre-conteudo .sobre-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  margin: 60px 0;
+  text-align: left;
+  flex-direction: row; /* garante texto à esquerda e imagem à direita */
+}
+.sobre-texto {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+.sobre-texto p {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--texto-escuro);
+}
+.sobre-imagem {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+.sobre-imagem img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+/* Inverte a ordem da grid */
+.sobre-grid.reverso {
+  flex-direction: row-reverse;
+}
+
+/* ======================= */
+/* 💎 VALORES REFINADOS   */
+/* ======================= */
+
+.valores {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: var(--cinza-claro);
+}
+
+.valores h2 {
+  font-size: 2.5rem;
+  color: var(--dourado-suave);
+  position: relative;
+}
+
+.valores h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: var(--rosa-antigo);
+  margin: 10px auto;
+}
+
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* 🎭 Animação de entrada suave */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.valor-item {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeInScale 0.6s ease-in-out;
+}
+
+/* 🌟 Efeito Hover Moderno */
+.valor-item:hover {
+  transform: scale(1.08);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Ícones */
+.valor-item i {
+  font-size: 2.5rem;
+  color: var(--dourado-suave);
+  margin-bottom: 15px;
+  transition: color 0.3s ease-in-out;
+}
+
+.valor-item:hover i {
+  color: var(--rosa-antigo);
+}
+
+/* 📱 Responsividade */
+@media (max-width: 768px) {
+  .valores-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .valores-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ======================= */
+/* 👥 EQUIPE COM ANIMAÇÕES */
+/* ======================= */
+
+.equipe h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--dourado-suave);
+  position: relative;
+}
+
+.equipe h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: var(--rosa-antigo);
+  margin: 10px auto;
+}
+
+.equipe-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  justify-items: center;
+  padding: 50px 20px;
+}
+
+.membro {
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  background: var(--cinza-claro);
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+/* 🌟 Efeito Hover */
+.membro:hover {
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+  background: var(--bege-claro);
+}
+
+/* 🌟 Efeito Parallax */
+.membro img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 4px solid var(--dourado-suave);
+  transition: transform 0.4s ease-in-out;
+}
+
+.membro:hover img {
+  transform: translateY(-5px);
+}
+
+/* 🎭 Animação de entrada */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.membro {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* 📱 Responsividade */
+@media (max-width: 768px) {
+  .equipe-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .equipe-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .membro:hover {
+    transform: none;
+  }
+}
+/* Configurações Gerais */
+.menu-hamburguer {
+  display: none;
+  font-size: 28px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  color: var(--dourado-suave);
+  background: var(--rosa-suave); /* Fundo para destacá-lo */
+  padding: 10px;
+  border-radius: 20%; /* Forma circular */
+  box-shadow: var(--sombra-suave); /* Sombra leve */
+  transition: all var(--transicao);
+}
+
+.menu-hamburguer:hover {
+  color: var(--branco);
+  background: var(--rosa-antigo); /* Cor de fundo ao passar o mouse */
+  transform: scale(1.1); /* Leve aumento ao passar o mouse */
+}
+
+nav.menu ul li a:hover {
+  color: var(--dourado-suave);
+}
+
+/* Mobile Responsivo */
+@media (max-width: 768px) {
+  .menu-hamburguer {
+    display: block;
+  }
+
+  nav.menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: var(--rosa-suave);
+    padding: 15px 20px;
+    box-shadow: var(--sombra-moderada);
+    border-bottom: 2px solid var(--dourado-suave);
+  }
+
+  nav.menu.active {
+    display: flex;
+  }
+
+  nav.menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav.menu ul li a {
+    width: 100%;
+    padding: 10px;
+    color: var(--branco);
+    transition: background-color var(--transicao);
+  }
+}

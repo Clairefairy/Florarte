@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre - Florarte</title>
+    <link rel="stylesheet" href="./sobre.style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Cabeçalho -->
+    <header>
+      <h1>
+        <a href="/index.html">
+          <img src="/image/Logo-sem-fundo.png" alt="logo do site" />
+        </a>
+      </h1>
+      <button class="menu-hamburguer" title="Abrir menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="menu">
+        <ul>
+          <li><a href="/index.html">Início</a></li>
+          <li><a href="/Sobre/sobre.html">Sobre</a></li>
+          <li><a href="/Produtos/produtos.html">Produtos</a></li>
+          <li><a href="/Contato/contato.html">Contato</a></li>
+          <li><button id="loginBtn">Entrar</button></li>
+        </ul>
+      </nav>
+    </header>
+
+    <script>
+      // Script DEVE vir depois do HTML
+      document.addEventListener("DOMContentLoaded", () => {
+        const btn = document.querySelector(".menu-hamburguer");
+        const menu = document.querySelector("nav.menu");
+
+        btn.addEventListener("click", () => {
+          menu.classList.toggle("active");
+        });
+      });
+    </script>
+
+    <!-- Banner Interno -->
+    <section class="banner-interno">
+      <h2>Sobre a Florarte</h2>
+      <p>Flores que encantam, histórias que inspiram.</p>
+    </section>
+
+    <!-- Nossa História -->
+    <section class="sobre-conteudo">
+      <div class="sobre-grid">
+        <div class="sobre-texto">
+          <h2>Nossa História</h2>
+          <p>
+            A Florarte nasceu do desejo de levar mais beleza e sensibilidade às
+            pessoas por meio das flores. Fundada em Recife, a empresa se dedica
+            à criação de arranjos florais únicos que traduzem sentimentos e
+            momentos especiais.
+          </p>
+        </div>
+        <div class="sobre-imagem">
+          <img
+            src="/image/imagem-sobre.jpg"
+            alt="Imagem representando a história da Florarte"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Conheça a Florarte -->
+    <section class="sobre-conteudo">
+      <div class="sobre-grid reverso">
+        <div class="sobre-imagem">
+          <img src="/image/nossa_loja.jpeg" alt="Conheça a Florarte" />
+        </div>
+        <div class="sobre-texto">
+          <h2>Conheça a Florarte</h2>
+          <p>
+            Trabalhamos com flores frescas, de qualidade e procedência. Nossa
+            equipe é apaixonada pelo que faz e se empenha em oferecer sempre o
+            melhor atendimento, entendendo cada necessidade e superando
+            expectativas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nossos Valores -->
+    <section class="valores">
+      <h2>Valores que Florescem</h2>
+      <div class="valores-grid">
+        <div class="valor-item">
+          <i class="fas fa-leaf"></i>
+          <h3>Respeito à Natureza</h3>
+          <p>
+            Selecionamos nossos fornecedores com responsabilidade ambiental.
+          </p>
+        </div>
+        <div class="valor-item">
+          <i class="fas fa-heart"></i>
+          <h3>Amor pelo que Fazemos</h3>
+          <p>Cada flor leva nosso carinho e dedicação.</p>
+        </div>
+        <div class="valor-item">
+          <i class="fas fa-users"></i>
+          <h3>Relacionamento</h3>
+          <p>Buscamos criar laços com nossos clientes e parceiros.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipe -->
+    <section class="equipe">
+      <h2>Nossa Equipe</h2>
+      <div class="equipe-grid">
+        <div class="membro">
+          <img src="/image/perfil2.png" alt="Maria Silva" />
+          <h3>Maria Silva</h3>
+          <p>Florista Chefe</p>
+        </div>
+        <div class="membro">
+          <img src="/image/perfil3.png" alt="João Oliveira" />
+          <h3>João Oliveira</h3>
+          <p>Design Floral</p>
+        </div>
+        <div class="membro">
+          <img src="/image/perfil1.png" alt="Ana Costa" />
+          <h3>Ana Costa</h3>
+          <p>Atendimento</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+      <p>&copy; 2025 Florarte. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Botão WhatsApp -->
+    <a
+      title="acesso ao WhatsApp"
+      href="https://wa.me/5581999999999"
+      rel="noopener"
+      class="btn-whatsapp"
+      target="_blank"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </body>
+</html>
