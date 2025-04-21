@@ -1,22 +1,40 @@
 {
-  "name": "Florarte Recife",
-  "short_name": "Florarte",
-  "start_url": "/index.html",
-  "display": "standalone",
-  "background_color": "#f2f2f2",
-  "theme_color": "#d1848e",
-  "orientation": "portrait-primary",
-  "lang": "pt-BR",
-  "icons": [
-    {
-      "src": "/image/icons/icon-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/image/icons/icon-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
+    "theme_color":"#d99da7",
+    "background_color":"#f2f2f2",
+    "icons":[
+        {
+            "purpose":"maskable",
+            "sizes":"512x512",
+            "src":"icon512_maskable.png",
+            "type":"image/png"
+        },
+        {
+            "purpose":"any",
+            "sizes":"512x512",
+            "src":"icon512_rounded.png",
+            "type":"image/png"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "/image/screenshot.png",
+            "type": "image/jpg",
+            "sizes": "1920x958",
+            "form_factor": "wide"
+          },
+          {
+            "src": "/image/screenshot_mobile.png",
+            "type": "image/jpg",
+            "sizes": "411x823",
+            "form_factor": "narrow"
+          }
+    ],
+    "orientation":"any",
+    "display":"standalone",
+    "dir":"auto",
+    "lang":"pt-BR",
+    "description":"Flores lindas pra você que é de Recife",
+    "start_url":"/index.html",
+    "name":"Florarte Recife",
+    "short_name":"Florarte"
 }
